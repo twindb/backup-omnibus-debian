@@ -1,6 +1,8 @@
 FROM debian:wheezy
 MAINTAINER Ovais Tariq @ovaistariq
 
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 RUN apt-get update && apt-get install -y \
     git \
     curl \
