@@ -6,18 +6,6 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update && apt-get install -y \
     git \
     curl \
-    autoconf \
-    binutils-doc \
-    bison \
-    flex \
-    gettext \
-    ncurses-dev \
-    rsync \
-    libyaml-dev \
-    ccache \
-    devscripts \
-    dpkg-dev \
-    fakeroot \
     build-essential \
     libssl-dev \
     libreadline-dev \
@@ -27,8 +15,6 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libexpat1-dev \
     libicu-dev \
-    unzip \
-    m4 \
     cmake
 
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
