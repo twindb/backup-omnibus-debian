@@ -32,4 +32,4 @@ RUN git clone https://github.com/twindb/backup.git
 RUN cd backup/omnibus && \
     /bin/bash -l -c "bundle install --binstubs"
 
-ENTRYPOINT /bin/bash -l /backup/omnibus/omnibus_build.sh
+ENTRYPOINT /bin/bash -l /omnibus/omnibus_build.sh
