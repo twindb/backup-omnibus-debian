@@ -25,4 +25,11 @@ RUN sed -i "s/libgmp-dev//g" /usr/local/rvm/scripts/functions/requirements/debia
 RUN /bin/bash -l -c "rvm requirements && rvm install 2.2.2 && gem install bundler --no-ri --no-rdoc" && \
     rm -rf /usr/local/rvm/src/ruby-2.2.2
 
-ENTRYPOINT /bin/bash -l /omnibus/omnibus_build.sh
+RUN git config --global user.email "packager@twindb.com" && \
+    git config --global user.name "TwinDB Packager (TwinDB packager key)" && \
+    git clone https://github.com/twindb/backup.git /twindb-backup
+
+RUN cd /twindb-backup/omnibus && \
+    /bin/bash -l -c "bundle install --binstubs"
+
+ENTRYPOINT /bin/bash -l /twindb-backup/omnibus/omnibus_build.sh
