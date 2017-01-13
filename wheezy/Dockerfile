@@ -41,7 +41,6 @@ RUN /bin/bash -l -c "rvm requirements && rvm install 2.2.2 && gem install bundle
 
 RUN git config --global user.email "packager@twindb.com" && \
     git config --global user.name "TwinDB Packager (TwinDB packager key)"
-
 RUN git clone https://github.com/twindb/backup.git
 
 RUN cd backup/omnibus && \
