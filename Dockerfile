@@ -12,7 +12,7 @@ RUN apt-get install -y \
         libreadline-dev \
         libxslt1-dev \
         libxml2-dev \
-        libcurl4-openssl-dev \
+        libcurl4-gnutls-dev \
         zlib1g-dev \
         libexpat1-dev \
         libicu-dev \
