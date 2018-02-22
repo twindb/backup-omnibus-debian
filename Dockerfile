@@ -40,4 +40,7 @@ RUN bash -c "source /etc/profile.d/rvm.sh; \
 
 RUN rm -rf /usr/local/rvm/src/ruby-2.2.2
 
+RUN git clone https://github.com/twindb/backup.git /tmp/backup
+RUN bash -lc "cd /tmp/backup/omnibus; bundle update; bundle install --binstubs"
+
 CMD /bin/bash -l
