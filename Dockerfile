@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER dev@twindb.com
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
